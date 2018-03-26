@@ -18,7 +18,7 @@ class PDF extends FPDF # doco at http://fpdf.org/
 	public $bottomMargin;
 	public $rightMargin;
 	
-  #####################################################
+  	#####################################################
 	#                                                   #
 	# AcceptPageBreak                                   #
 	#                                                   #
@@ -29,7 +29,7 @@ class PDF extends FPDF # doco at http://fpdf.org/
   return false; # original useless FPDF function we don't want to use
 	}
 
-  #####################################################
+  	#####################################################
 	#                                                   #
 	# CheckPageBreak                                    #
 	#                                                   #
@@ -47,7 +47,7 @@ class PDF extends FPDF # doco at http://fpdf.org/
 	return $this->currentY;
 	}
 
-  #####################################################
+  	#####################################################
 	#                                                   #
 	# LoadData                                          #
 	#                                                   #
@@ -65,7 +65,7 @@ class PDF extends FPDF # doco at http://fpdf.org/
 	return $data;
 	}
 
-  #####################################################
+  	#####################################################
 	#                                                   #
 	# QuickTable                                        #
 	#                                                   #
@@ -129,7 +129,7 @@ class PDF extends FPDF # doco at http://fpdf.org/
 		}		
 	}
 
-  #####################################################
+  	#####################################################
 	#                                                   #
 	# DoTableBorder                                     #
 	#                                                   #
@@ -175,7 +175,7 @@ class PDF2 extends PDF
 	var $CENTER;
 	var $inTable;
 	
-  #####################################################
+  	#####################################################
 	#                                                   #
 	# PDF2                                              #
 	#                                                   #
@@ -223,7 +223,7 @@ var $bMargin;            // page break margin
 	  }
   }
 
-  #####################################################
+  	#####################################################
 	#                                                   #
 	# AcceptPageBreak                                   #
 	#                                                   #
@@ -237,7 +237,7 @@ var $bMargin;            // page break margin
   	return true; 
 	}
   
-  #####################################################
+  	#####################################################
 	#                                                   #
 	# WriteTag                                          #
 	#                                                   #
@@ -380,7 +380,7 @@ var $bMargin;            // page break margin
 	return $retval; # leftover html that wasn't printed
 	}
 
-  #####################################################
+  	#####################################################
 	#                                                   #
 	# EnterTag                                          #
 	#                                                   #
@@ -407,7 +407,7 @@ var $bMargin;            // page break margin
 		}
 	}
 
-  #####################################################
+  	#####################################################
 	#                                                   #
 	# LeaveTag                                          #
 	#                                                   #
@@ -434,7 +434,7 @@ var $bMargin;            // page break margin
 		}
 	}
 
-  #####################################################
+  	#####################################################
 	#                                                   #
 	# SetStyle                                          #
 	#                                                   #
@@ -454,7 +454,7 @@ var $bMargin;            // page break margin
 	$this->SetFont('',$style);
 	}
   
-  #####################################################
+  	#####################################################
 	#                                                   #
 	# MyWrite                                           #
 	#                                                   #
@@ -623,7 +623,7 @@ var $bMargin;            // page break margin
 	return $retval;
 	}
 
-  #####################################################
+  	#####################################################
 	#                                                   #
 	# WriteHTML                                         #
 	#                                                   #
@@ -756,7 +756,7 @@ if (!is_null($this->fp))
 		}
 	}
 	
-  #####################################################
+  	#####################################################
 	#                                                   #
 	# OpenTag                                           #
 	#                                                   #
@@ -1027,7 +1027,7 @@ if (!is_null($this->fp))
 	return $retval;
 	}
 
-  #####################################################
+  	#####################################################
 	#                                                   #
 	# CloseTag                                          #
 	#                                                   #
@@ -1203,7 +1203,7 @@ if (!is_null($this->fp))
 		}
 	}
 
-  #####################################################
+  	#####################################################
 	#                                                   #
 	# PutLink                                           #
 	#                                                   #
@@ -1219,7 +1219,7 @@ if (!is_null($this->fp))
 	$this->SetTextColor(0);
 	}
 
-  #####################################################
+  	#####################################################
 	#                                                   #
 	# Footer                                            #
 	#                                                   #
@@ -1242,7 +1242,7 @@ if (!is_null($this->fp))
 	$this->Cell(0,10,$pageLabel,0,0,'C');
 	}
 	
-  #####################################################
+  	#####################################################
 	#                                                   #
 	# AddPage                                           #
 	#                                                   #
@@ -1256,7 +1256,7 @@ if (!is_null($this->fp))
 		$this->_numPageNum++;
   }
 
-  #####################################################
+  	#####################################################
 	#                                                   #
 	# startPageNums                                     #
 	#                                                   #
@@ -1268,7 +1268,7 @@ if (!is_null($this->fp))
   $this->_numberingFooter=true;
   }
 
-  #####################################################
+  	#####################################################
 	#                                                   #
 	# stopPageNums                                      #
 	#                                                   #
@@ -1280,7 +1280,7 @@ if (!is_null($this->fp))
   $this->_numberingFooter=false;
   }
 
-  #####################################################
+  	#####################################################
 	#                                                   #
 	# numPageNo                                         #
 	#                                                   #
@@ -1291,7 +1291,7 @@ if (!is_null($this->fp))
   return $this->_numPageNum;
   }
 
-  #####################################################
+  	#####################################################
 	#                                                   #
 	# Bookmark                                          #
 	#                                                   #
@@ -1304,7 +1304,7 @@ if (!is_null($this->fp))
 	$this->outlines[]=array('t'=>$txt, 'l'=>$level, 'y'=>($this->h-$y)*$this->k, 'p'=>$this->PageNo());
 	}
 
-  #####################################################
+  	#####################################################
 	#                                                   #
 	# BookmarkUTF8                                      #
 	#                                                   #
@@ -1315,7 +1315,7 @@ if (!is_null($this->fp))
 	$this->Bookmark($this->_UTF8toUTF16($txt),$level,$y);
 	}
 	
-  #####################################################
+  	#####################################################
 	#                                                   #
 	# _putbookmarks                                     #
 	#                                                   #
@@ -1381,7 +1381,7 @@ if (!is_null($this->fp))
 	$this->_out('endobj');
 	}
 	
-  #####################################################
+  	#####################################################
 	#                                                   #
 	# _putresources                                     #
 	#                                                   #
@@ -1393,7 +1393,7 @@ if (!is_null($this->fp))
   $this->_putbookmarks();
 	}
 	
-  #####################################################
+  	#####################################################
 	#                                                   #
 	# _putcatalog                                       #
 	#                                                   #
@@ -1443,7 +1443,7 @@ function px2mm($px)
 return $px*25.4/72;
 }
 
-    #####################################################
+    		#####################################################
 		#                                                   #
 		# GenerateEbook                                     #
 		#                                                   #
@@ -1466,163 +1466,10 @@ return $px*25.4/72;
 				
 		$myPDF->AddPage($myPDF->orient);
 		$myPDF->currentY = 10;
-/*		$myPDF->Bookmark("Cover");
 
-		$myPDF->SetFillColor (150);
-		$myPDF->SetTextColor (255);
- 		$myPDF->SetFont('Arial','',24);
-		$myPDF->MultiCell(0, 24, $GLOBALS['title'], 1, 'C', true);
-
-		$myPDF->SetFillColor (255); # causes page number to show on front page ?
-		$myPDF->SetTextColor (0);
-		
-		$myPDF->currentY = $myPDF->getY() + 10;
-
-		$src = "";
-		$mySpecialBlogs = array 
-		(
-		"handyfolks.com.au"  => "http://handyfolks.com.au/img/pier.jpg", 
-		"trendauthority.net" => "http://trendauthority.net/img/nightbridge.jpg",
-		"social-buzz.info"      => "http://social-buzz.info/img/snowpeak.jpg",
-		);
-		
-		if (array_key_exists ($_SERVER['SERVER_NAME'], $mySpecialBlogs))
-			$src = $mySpecialBlogs[$_SERVER['SERVER_NAME']];
-		
-		else	
-			{
-			$url = preg_replace ("/index\.php/", "", "http://".$_SERVER['SERVER_NAME'].$_SERVER['SCRIPT_NAME']);			
-			$url .= "blogheader.html";
-			$page = file_get_contents ($url);
-			
-			if (preg_match ("@<img\s+class=\"bannerimg\"\s+src=\"(\S+)\".+/>@i", $page, $matches))
-				$src = $matches[1];
-			}
-		
-		if ($src !== "")
-			{
-			list($width, $height, $type, $text, $mime, $channels, $bits) = getimagesize($src);
-					
-			$pixwidth = 190;
-			$pixheight = $height * ($pixwidth / $width);
-				
-			
-			$myPDF->Image($src, 10 + (($myPDF->rightMargin - $pixwidth)/2), $myPDF->currentY, $pixwidth, 0);
-			$myPDF->currentY += $pixheight + 10;
-			}
-			
-		$myPDF->SetXY(10 + ($myPDF->rightMargin - 100)/2, $myPDF->currentY);
-		
-		$myPDF->SetFont('Times','I',8);
-		$myPDF->MultiCell(100, 5, "Compilation of blog articles\n(C) ".date('Y')." Bruno Deshayes", 0, 'C', false);
-
-		$myPDF->SetFont('Times','',10);
-		$myPDF->SetTextColor (0, 0, 255);
-#		$url = preg_replace ("/index\.php/", "", "http://".$_SERVER['SERVER_NAME'].$_SERVER['SCRIPT_NAME']);			
-		$url = $this->myBlogs[$GLOBALS['title']];
-		$myPDF->Cell(0, 5, $url, 0, 0, "C", false, $url);
-		$myPDF->SetTextColor (0);
-		
-#		if (!($db = sqlite_open(SYSTEM))) 
-#	    die('SQL ERROR: Open failed: ' . sqlite_error_string(sqlite_last_error($db)));
-						
-		$today = date('Ymd');
-		$sql = "select * from blogentries where entry = 0 and accepted = 1 and log_date <= $today order by log_date desc;";
-
-		if (!($result = sqlite_query($this->sysdb, $sql))) 
-	    die('SQL ERROR: ' . sqlite_error_string(sqlite_last_error($this->sysdb)) . " - Query was: {$sql}");
-					
-    # do TOC
-                            
-    $myPDF->AddPage($this->orient);
-		$myPDF->startPageNums();
-		$myPDF->Bookmark("Contents");
-
-    $myPDF->SetFont('Times','B',14);
-    $myPDF->Cell(0,5,'Table of Contents',0,1,'C');
-    $myPDF->Ln(10);
-
-		$myArticles = array();
-		
-		while ($columns = sqlite_fetch_array($result)) 
-			{
-			fixSQLquote ($columns);
-
-			if ((!preg_match ("/support/", $columns['tags'])))
-				{
-				$str = $columns['title'];
-				$myArticles[$columns['id']] = $myPDF->AddLink();
-				$myPDF->SetFont('Times','B',10);
-				
-				$myPDF->SetTextColor(0,0,255);
-				$myPDF->SetStyle('U',true);
-				$myPDF->Cell($strsize+2,$this->FontSize+2,$str, 0, 0, 'L', false, $myArticles[$columns['id']]);
-				$myPDF->SetStyle('U',false);
-				$myPDF->SetTextColor(0);
-				$myPDF->Ln(5);
-				}
-			}
-
-		$resId = 0;
-		$resStr = "Resources";
-		$myArticles[$resId] = $myPDF->AddLink();
-		$myPDF->SetFont('Times','B',10);
-		
-		$myPDF->SetTextColor(0,0,255);
-		$myPDF->SetStyle('U',true);
-		$myPDF->Cell($strsize+2,$this->FontSize+2,$resStr, 0, 0, 'L', false, $myArticles[$resId]);
-		$myPDF->SetStyle('U',false);
-		$myPDF->SetTextColor(0);
-		$myPDF->Ln(5);
-
-		if (!($result = sqlite_query($this->sysdb, $sql))) 
-	    die('SQL ERROR: ' . sqlite_error_string(sqlite_last_error($this->sysdb)) . " - Query was: {$sql}");
-		
-		while ($columns = sqlite_fetch_array($result)) 
-			{
-			fixSQLquote ($columns);
-			
-			if ((!preg_match ("/support/", $columns['tags'])))
-				{
-				$myPDF->AddPage($myPDF->orient);
-									
-				$myPDF->currentY = 10;
-	
-				$myPDF->SetLink($myArticles[$columns['id']], -1, -1);
-				$myPDF->Bookmark($columns['title']);
-
-				$myPDF->SetFillColor (150);
-				$myPDF->SetTextColor (255);
-	   		$myPDF->SetFont('Arial','',14);
-				$myPDF->MultiCell(0, 16, $columns['title'], 1, 'C', true);
-				$myPDF->Ln(5);
-				$myPDF->currentY = $myPDF->getY();
-	
-				$myPDF->SetFillColor (255);
-				$myPDF->SetTextColor (0);
-	   		$myPDF->SetFont('Times','',10);
-	   		
-				if (preg_match ("/subscription/", $columns['tags']) and ($_SESSION['paid'] != 1))
-					{
-					$stream  = trim(preg_replace ("/\n.+/", "", $columns['memo']));
-					$stream .= "...<br /><i>To read the full article <a href=\"http://{$_SERVER['HTTP_HOST']}?account=new\">take a subscription</a></i>";
-					$stream .= "<br /><br />";
-					$myPDF->WriteHTML($stream);
-					}
-					
-				else
-					$myPDF->WriteHTML($columns['memo']);
-			  }
-		  }			
-				
-		$myPDF->AddPage($pdf->orient);
-							
-		$myPDF->SetLink($myArticles[$resId], -1, -1);
-		$myPDF->Bookmark($resStr);
-*/
 		$myPDF->SetFillColor (255);
 		$myPDF->SetTextColor (0);
-	  $myPDF->SetFont('Times','',10);
+	  	$myPDF->SetFont('Times','',10);
  		
 		$myPDF->WriteHTML(file_get_contents($myfile));
 		$myOutput = preg_replace("/\.html$/i", ".pdf", $myfile);
